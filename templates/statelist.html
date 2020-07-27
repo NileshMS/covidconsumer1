@@ -1,0 +1,16 @@
+<html>
+<table align="center">
+    <thead>
+    <tr>
+        <th style="height: 50px; width: 100%; background-color: coral">States</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for state in states %}
+        <tr>
+            <td style="background-color: cornsilk"><a href="{% url 'districts' state %}" style="text-decoration: none; color: darkslategrey">{{ state }}</a></td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</html>

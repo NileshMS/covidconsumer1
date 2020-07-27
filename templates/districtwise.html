@@ -1,0 +1,33 @@
+<html>
+<table align="center">
+    <thead>
+    <tr>
+        <th colspan="5" style="height: 50px; width: 100%; background-color: coral">{{ state }}</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th>district</th>
+        <th>active</th>
+        <th>confirmed</th>
+        <th>deceased</th>
+        <th>recovered</th>
+    </tr>
+    {% for x, y in districts.districtData.items %}
+        <tr>
+            <td style="background-color: cornsilk">{{ x }}</td>
+            <td style="background-color: cornsilk">{{ y.active }}</td>
+            <td style="background-color: cornsilk">{{ y.confirmed }}</td>
+            <td style="background-color: cornsilk">{{ y.deceased }}</td>
+            <td style="background-color: cornsilk">{{ y.recovered }}</td>
+        </tr>
+    {% endfor %}
+    <tr>
+        <td>total</td>
+        {% for m in total %}
+            <td>{{ m }}</td>
+        {% endfor %}
+    </tr>
+    </tbody>
+</table>
+</html>
